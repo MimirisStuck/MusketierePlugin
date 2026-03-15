@@ -1,4 +1,10 @@
 <?php
+/*
+Plugin Name: My Plugin
+Description: Erstes Plugin für Musketier-Daten
+Version: 1.0
+Author: Dein Name
+*/
 
 require_once plugin_dir_path(__FILE__) . 'includes/database.php';
 
@@ -24,5 +30,15 @@ function musketierPluginDefaultInsert(){
             $role
         );
     }
+
+    $wpdb->insert(
+        $wpdb->prefix . 'musketier_user',
+        array(
+            'first_name' => 'Philipp',
+            'last_name' => 'Schnake',
+            'email' => 'philipp.schnake@gmail.com',
+            'role_id' => '1'
+        )
+    );
 }
 ?>
