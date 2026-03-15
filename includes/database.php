@@ -18,7 +18,7 @@ function musketierPluginDatabase(){
             KEY roles (role_id)
     ) $charset_collate;";
     
-    dbDelte($sql);
+    dbDelta($sql);
     
     $table_name = $wpdb->prefix . 'roles';
     
@@ -28,6 +28,6 @@ function musketierPluginDatabase(){
             PRIMARY KEY (id)
     ) $charset_collate;";
     
-    dbDelte($sql);
+    dbDelta($sql);
 }
 ?>

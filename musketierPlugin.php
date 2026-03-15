@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: My Plugin
+Plugin Name: Musketier Plugin
 Description: Erstes Plugin für Musketier-Daten
 Version: 1.0
-Author: Dein Name
+Author: Philipp Schnake
 */
 
 require_once plugin_dir_path(__FILE__) . 'includes/database.php';
@@ -41,4 +41,6 @@ function musketierPluginDefaultInsert(){
         )
     );
 }
+
+register_activation_hook(__FILE__, 'musketierPluginDefaultInsert');
 ?>
